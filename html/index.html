@@ -14,16 +14,16 @@
 </head>
 
 <body>
-  <header>
-    <div class="logo-containter">
-      <h1>Openviki</h1>
+  <header >
+    <div id="logo-container">
+      <h1><a href="#introduction-container" class="logo" >Openviki</a></h1>
     </div>
     <nav>
       <ul class="nav-links">
-        <li><a href="" class="">about</a></li>
-        <li><a href="" class="">blogs</a></li>
-        <li><a href="" class="">work</a></li>
-        <li><a href="" class="">contact</a></li>
+          <li><a href="#introduction-container" class="">home</a></li>
+        <li><a href="#about-me-container" class="">about</a></li>
+        <li><a href="#blogs-container" class="">blogs</a></li>
+        <li><a href="#work-container" class="">work</a></li>
       </ul>
     </nav>
     <div class="menu">
@@ -31,7 +31,7 @@
     </div>
   </header>
   <main>
-    <section class="introduction-container">
+    <section id="introduction-container">
       <div class="intro-text">
         <h4>Hello, I'm</h4>
         <h2>Vinayak P H</h2>
@@ -40,8 +40,8 @@
           accusantium! Porro possimus officiis optio molestias cupiditate
         </p>
         <div class="cta">
-          <button class="cta-resume">resume</button>
-          <button class="cta-mywork">my work</button>
+          <button class="cta-resume" onclick="handleResumeButton()">resume</button>
+          <button class="cta-mywork" onclick="location.href = '#work-container'">my work</button>
         </div>
       </div>
       <div class="cover-container">
@@ -53,14 +53,15 @@
       <div class="social-links">
         <div class="line"></div>
         <div class="social-icons">
-          <i class="flaticon-github"></i>
-          <i class="flaticon-linkedin"></i>
-          <i class="flaticon-twitter"></i>
+          <i class="flaticon-github" id="github"  onclick="handleGitSocial()"></i>
+          <i class="flaticon-linkedin" id="linkedin"  onclick="handleLinkedInSocial()"></i>
+          <i class="flaticon-medium" id="medium"  onclick="handleMediumSocial()"></i>
+          <i class="flaticon-behance" id="behance"  onclick="handleBehanceSocial()"></i>
         </div>
       </div>
     </section>
 
-    <section class="about-me-container">
+    <section id="about-me-container">
       <div class="aboutme-header">
         <h1 class="about-me-underline">About me</h1>
       </div>
@@ -121,7 +122,8 @@
         </div>
       </div>
     </section>
-    <section class="blogs-container">
+
+    <section id="blogs-container">
       <div class="aboutme-header blog-header">
         <h1 class="about-me-underline">Blogs</h1>
         <hr>
@@ -176,11 +178,22 @@
             <button class="cta-blog">Read more ...</button>
           </div>
         </div>
+      </div>
+        <div class='readmore'>
+          <button class="cta-resume">More Blogs </button>
+        </div>
 
-        <div class="card">
-          <img
-            src="https://images.pexels.com/photos/269733/pexels-photo-269733.jpeg?cs=srgb&dl=bloom-blossom-dew-flora-269733.jpg&fm=jpg"
-            class="card-image" />
+    </section>
+
+    <section id="work-container">
+      <div class="aboutme-header blog-header">
+        <h1 class="about-me-underline">Work</h1>
+        <hr>
+      </div>
+
+      <div class="blogs">
+
+        <div class="card">         
           <div class="card-container">
             <div class="card-heading">
               <h4>How to create a FRONT END FRAMEWORK with Sketch.</h4>
@@ -193,9 +206,41 @@
           </div>
         </div>
 
-      </div>
+        <div class="card">         
+            <div class="card-container">
+              <div class="card-heading">
+                <h4>How to create a FRONT END FRAMEWORK with Sketch.</h4>
+              </div>
+              <div class="card-body">
+                <sub>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro possimus officiis optio molestias
+                  cupiditate accusantium! Porro </sub>
+              </div>
+              <button class="cta-blog">Read more ...</button>
+            </div>
+          </div>
 
+          <div class="card">         
+              <div class="card-container">
+                <div class="card-heading">
+                  <h4>How to create a FRONT END FRAMEWORK with Sketch.</h4>
+                </div>
+                <div class="card-body">
+                  <sub>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro possimus officiis optio molestias
+                    cupiditate accusantium! Porro </sub>
+                </div>
+                <button class="cta-blog">Read more ...</button>
+              </div>
+            </div>
+
+      </div>
     </section>
+
+    <section class="footer-container">
+      <Footer>
+        links
+      </Footer>   
+    </section>
+  
   </main>
   <script src="../Javascipt/index.js"></script>
 </body>

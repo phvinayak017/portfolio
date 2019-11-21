@@ -28,8 +28,16 @@ header {
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(1, 27, 255, 0.19);
 }
 
-.logo-containter {
+#logo-container {
   margin: 0 0 0 -33px;
+}
+
+.logo{
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(83, 83, 83);
+  text-transform: uppercase;
 }
 
 .nav-links {
@@ -56,7 +64,7 @@ header {
 
 /* introduction-container */
 
-.introduction-container {
+#introduction-container {
   display: flex;
   width: 75%;
   margin: 28vh auto auto auto;
@@ -132,6 +140,10 @@ button {
   color: rgb(148, 148, 148);
 }
 
+#github,#linkedin, #medium, #behance{
+  cursor: pointer;
+}
+
 /* cover container */
 
 .cover-container {
@@ -145,7 +157,7 @@ button {
 
 /* About Me */
 
-.about-me-container {
+#about-me-container {
   margin-top: 10vh;
 }
 
@@ -216,22 +228,22 @@ button {
 
 .blogs {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   width: 75%;
   margin: 1vh auto 5vh auto;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .blog-header {
-  margin-top: 10vh;
+  margin: 20vh 0 8vh 0;
 }
 
 .card {
   box-shadow: 2px 4px 8px 2px #7e7e7e9f;
   transition: 0.3s;
-  width: 22%;
-  margin: 8vh 0vh 0 0;
+  width: 30%;
+  margin: 8vh 1vh 0 0;
 }
 
 .card-image {
@@ -257,6 +269,19 @@ button {
   color: #0856ff;
   font-size: 0.9rem;
   font-weight: 400;
+}
+
+.readmore{
+  display: flex;
+  justify-content: center;
+  margin: 10vh 0 0 0;
+}
+
+Footer{
+  background:#0010ec;
+  padding: 10vh 0 10vh 0;
+  margin: 10vh 0 0 0;
+  color: #eeeeee;
 }
 
 @media screen and (max-width:800px) {
@@ -293,6 +318,61 @@ button {
   .line {
     width: 50%;
   }
+
+  .card {  
+    width: 45%;
+    margin: 8vh 0.5vh -5.5vh 0;
+  }
+
+  .about-me {
+    display: block;
+    margin: 10vh auto auto auto;
+    align-items: center;
+    text-align: center;
+  }
+  .info-me {
+    width: 100%;
+  }
+  .skills {
+    margin: 10vh 0 0 3vw;
+    display: block;
+    align-items: center;
+  }
+  .skill {
+    justify-content: space-between;
+    align-items: center;
+    width: 35vw;
+    margin: 2vh 0 2vh 0;
+  }
+  .skill-name {
+    font-size: 0.9rem;
+  }
+  .js {
+    width: 26%;
+  }
+  .react {
+    width: 24%;
+  }
+  .htm {
+    width: 24%;
+  }
+  .css {
+    width: 24%;
+  }
+  .python {
+    width: 22%;
+  }
+  .xd-ps {
+    width: 26%;
+  }
+  .skill-reference {
+    width: 30%;
+  }
+
+  .card {  
+    margin: 8vh 1vh -1vh 0;
+  }
+  
 }
 
 @media screen and (max-width:500px) {
@@ -339,48 +419,9 @@ button {
       transform: translateX(0px)
     }
   }
-  .about-me {
-    display: block;
-    margin: 10vh auto auto auto;
-    align-items: center;
-    text-align: center;
-  }
-  .info-me {
-    width: 100%;
-  }
-  .skills {
-    margin: 10vh 0 0 3vw;
-    display: block;
-    align-items: center;
-  }
-  .skill {
-    justify-content: space-between;
-    align-items: center;
-    width: 35vw;
-    margin: 2vh 0 2vh 0;
-  }
-  .skill-name {
-    font-size: 0.9rem;
-  }
-  .js {
-    width: 26%;
-  }
-  .react {
-    width: 24%;
-  }
-  .htm {
-    width: 24%;
-  }
-  .css {
-    width: 24%;
-  }
-  .python {
-    width: 22%;
-  }
-  .xd-ps {
-    width: 26%;
-  }
-  .skill-reference {
-    width: 30%;
+
+  .card {  
+    width: 90%;
+    margin: 8vh 1vh -5vh 0;
   }
 }
